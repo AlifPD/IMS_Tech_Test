@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Loan Installment Calculator</h2>
+
+    <label>OTR: <input type="number" id="otr" /></label><br />
+    <label>
+        DP:
+        <input type="number" id="dp" />
+        <select id="dpType" onchange="onDPTypeChange()">
+            <option value="fixed">Rp</option>
+            <option value="percent">%</option>
+        </select>
+    </label><br />
+    <label>Jangka Waktu (bulan): <input type="number" id="jangka" /></label><br />
+
+    <button onclick="calculate()">Hitung</button>
+    <button onclick="resetForm()">Reset</button>
+
+    <h3>Hasil:</h3>
+    <p id="result"></p>
+
+    <script src="utils.js"></script>
+</body>
+
+</html>
